@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ovenlight"
+version = "0.1.0"
+description = "Find, follow and reopen your Claude Code sessions (macOS and Linux). Not affiliated with Anthropic."
+readme = "README.md"
+license = {text = "MIT"}
+authors = [{name = "Vinicius Tassinari"}]
+requires-python = ">=3.9"
+dependencies = []
+keywords = ["claude-code", "sessions", "cli", "terminal", "developer-tools"]
+classifiers = [
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: MacOS",
+  "Operating System :: POSIX :: Linux",
+  "Programming Language :: Python :: 3",
+  "Environment :: Console",
+  "Environment :: Web Environment",
+]
+
+[project.urls]
+Homepage = "https://github.com/viniciustass/ovenlight"
+Issues = "https://github.com/viniciustass/ovenlight/issues"
+
+[project.scripts]
+ovenlight = "ovenlight.cli:main"
+
+[tool.setuptools]
+packages = ["ovenlight"]
+
+[tool.setuptools.package-data]
+ovenlight = ["ui.html", "static/*"]

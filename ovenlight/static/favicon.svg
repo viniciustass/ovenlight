@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <radialGradient id="lg-bg" cx=".28" cy=".18" r=".95">
+      <stop offset="0" stop-color="#3a2219"/>
+      <stop offset=".55" stop-color="#151012"/>
+      <stop offset="1" stop-color="#0a0a0b"/>
+    </radialGradient>
+    <radialGradient id="lg-glow" cx=".5" cy=".55" r=".62">
+      <stop offset="0" stop-color="#ffe2b0"/>
+      <stop offset=".45" stop-color="#f0a466"/>
+      <stop offset="1" stop-color="#b9532e"/>
+    </radialGradient>
+  </defs>
+  <!-- oven body -->
+  <rect width="64" height="64" rx="14" fill="url(#lg-bg)"/>
+  <rect x=".75" y=".75" width="62.5" height="62.5" rx="13.25" fill="none" stroke="#d97757" stroke-opacity=".35" stroke-width="1.5"/>
+  <!-- knobs and the oven light -->
+  <circle cx="16" cy="12.5" r="3.2" fill="#2a1d18" stroke="#7a5241" stroke-width="1.4"/>
+  <circle cx="26" cy="12.5" r="3.2" fill="#2a1d18" stroke="#7a5241" stroke-width="1.4"/>
+  <rect x="37" y="10.5" width="15" height="4" rx="2" fill="#ffc98a"/>
+  <!-- window with the glow and the asterisk -->
+  <rect x="9" y="20" width="46" height="35" rx="7.5" fill="#160d0a" stroke="#7a5241" stroke-width="2"/>
+  <rect class="glow" x="12.5" y="23.5" width="39" height="28" rx="5" fill="url(#lg-glow)"/>
+  <g class="ast" stroke="#fff6ec" stroke-width="3.2" stroke-linecap="round">
+    <line x1="32" y1="29.5" x2="32" y2="45.5"/>
+    <line x1="24" y1="37.5" x2="40" y2="37.5"/>
+    <line x1="26.34" y1="31.84" x2="37.66" y2="43.16"/>
+    <line x1="37.66" y1="31.84" x2="26.34" y2="43.16"/>
+  </g>
+</svg>
