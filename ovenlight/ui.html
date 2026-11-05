@@ -638,7 +638,9 @@ function md(src){
 
 /* Claude Code style transcript line */
 function fmtMsg(m,max){
-  const t=String(m.text||'').slice(0,max||2000);
+  const full=String(m.text||'');
+  const lim=(m.kind==='reply'||m.kind==='prompt')?60000:(max||2000);
+  const t=full.length>lim?full.slice(0,lim)+'\n\n… ('+(full.length-lim)+' more chars)':full;
   const line=(cls,pfx,body)=>`<div class="msg ${cls}"><span class="pfx">${pfx}</span><div>${body}</div></div>`;
   if(m.kind==='prompt')return line('prompt','&gt;',esc(t));
   if(m.kind==='reply')return line('reply md','●',md(t));
